@@ -1,0 +1,49 @@
+// Elementos del DOM
+const sendBtn = document.getElementById("send-btn");
+const userInput = document.getElementById("user-input");
+const chatBox = document.getElementById("chat-box");
+
+// Función para enviar mensaje y recibir respuesta de la API
+async function sendMessage() {
+  const input = userInput.value.trim();
+  if (!input) return;
+
+  // Mostrar mensaje del usuario
+  chatBox.innerHTML += `<div class="user-msg">${input}</div>`;
+  userInput.value = "";
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer TU_API_KEY"  // Pon tu API_KEY aquí
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: input }],
+        max_tokens: 200
+      })
+    });
+
+    const data = await response.json();
+    const reply = data.choices[0].message.content;
+
+    // Mostrar respuesta de la IA
+    chatBox.innerHTML += `<div class="ai-msg">${reply}</div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+  } catch (err) {
+    console.error(err);
+    chatBox.innerHTML += `<div class="ai-msg">Error: No se pudo conectar al asistente.</div>`;
+  }
+}
+
+// Evento click
+sendBtn.addEventListener("click", sendMessage);
+
+// Evento Enter para enviar mensaje
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
