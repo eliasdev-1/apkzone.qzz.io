@@ -18,7 +18,7 @@ async function sendMessage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer TU_API_KEY"  // Pon tu API_KEY aquí
+        "Authorization": "Bearer TU_API_KEY"  //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
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
