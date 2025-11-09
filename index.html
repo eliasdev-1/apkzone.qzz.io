@@ -1,219 +1,219 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-8467764962023954">
+  <title>APKZone - Descarga juegos Android gratis</title>
+  <meta name="description" content="Descarga juegos APK para Android de forma gratuita y segura. Colección actualizada con enlaces directos a MediaFire.">
+  <meta name="keywords" content="apk, juegos android, descargar apk, mediafire, apkzone, juegos gratis">
+  <meta name="author" content="Elías Dev">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="canonical" href="https://apkzone.qzz.io/">
 
-  <meta charset="UTF-8" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="APKZone - Descarga juegos Android gratis">
+  <meta property="og:description" content="Explora y descarga juegos APK actualizados desde MediaFire. 100% gratis y seguro.">
+  <meta property="og:url" content="https://apkzone.qzz.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://apkzone.qzz.io/images/banner.jpg">
+  <meta name="robots" content="index, follow">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS interno -->
+ <style>
+  /* Reset básico */
+  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a { text-decoration: none; color: inherit; }
 
-  <meta name="google-adsense-account" content="ca-pub-8467764962023954">
+  /* Header */
+  header.site-header {
+    background: rgba(0,0,0,0.6);
+    padding: 15px 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand .logo {
+    width:50px; height:50px; background: url('images/favicon.png') no-repeat center/contain;
+  }
+  .brand h1 { font-size: 1.5rem; }
+  .brand small { font-size: 0.8rem; color: #ccc; }
 
-  <!-- Título que aparecerá en Google -->
+  .search input {
+    padding:8px 12px;
+    border-radius: 5px;
+    border:none;
+    width: 250px;
+  }
 
-  <title>APKZone - Descarga juegos Android gratis</title>
+  /* Catálogo */
+  #catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    flex:1;
+  }
+  article.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  article.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  }
+  article.card img {
+    width:100%;
+    height: auto;
+    display:block;
+  }
+  article.card .info {
+    padding: 8px;
+    text-align: center;
+  }
+  article.card h3 {
+    margin-bottom: 3px;
+    font-size: 1rem;
+  }
+  article.card p {
+    font-size: 0.8rem;
+    color: #ccc;
+  }
 
+  /* Footer */
+  footer.site-footer {
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
 
-  <!-- Descripción corta que saldrá debajo del título -->
-
-  <meta name="description" content="Descarga juegos APK para Android de forma gratuita y segura. Colección actualizada con enlaces directos a MediaFire.">
-
-
-  <!-- Palabras clave -->
-
-  <meta name="keywords" content="apk, juegos android, descargar apk, mediafire, apkzone, juegos gratis">
-
-
-  <!-- Autor -->
-
-  <meta name="author" content="Elías Dev">
-
-
-  <!-- Icono del sitio (favicon) -->
-
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-
-  <!-- Canonical URL -->
-
-  <link rel="canonical" href="https://apkzone.qzz.io/">
-
-
-  <!-- CSS principal -->
-
-  <link rel="stylesheet" href="styles/style.css">
-
-
-  <!-- Open Graph para compartir en redes sociales -->
-
-  <meta property="og:title" content="APKZone - Descarga juegos Android gratis">
-
-  <meta property="og:description" content="Explora y descarga juegos APK actualizados desde MediaFire. 100% gratis y seguro.">
-
-  <meta property="og:url" content="https://apkzone.qzz.io/">
-
-  <meta property="og:type" content="website">
-
-  <meta property="og:image" content="https://apkzone.qzz.io/images/banner.jpg">
-
-
-  <!-- Robots -->
-
-  <meta name="robots" content="index, follow">
-
-
-
+  /* Móvil: 2 columnas y 3 filas */
+  @media (max-width: 600px) {
+    #catalog {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+    .search input {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+</style>
 </head>
 
-
 <body>
-
-
-  <!-- HEADER -->
-
-  <header class="site-header">
-
-    <div class="container">
-
-      <div class="brand">
-
-        <div class="logo" aria-hidden="true"></div>
-
-        <div>
-
-          <h1>Tienda APK — Juegos</h1>
-
-          <small class="muted">Catálogo simple de APKs — proyecto educativo</small>
-
-        </div>
-
-      </div>
-
-      <div class="search">
-
-        <input id="searchInput" type="search" placeholder="Buscar por título, género o desarrollador" aria-label="Buscar juegos">
-
-      </div>
-
-    </div>
-
-  </header>
-
-
-<section id="catalog" class="catalog" aria-live="polite">
-
-
-  <a href="spotify.html" class="card">
-
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZpMnbuWBgwOenNOrddKMY04bXIEcXllZYjgwPSLA_RQ&s=10" alt="Spotify">
-
-    <div class="info">
-
-      <h3>Spotify</h3>
-
-      <p>Musica, Podcast</p>
-
-    </div>
-
-  </a>
-
-
-  <a href="freefire.html" class="card">
-
-    <img src="https://image.winudf.com/v2/image1/Y29tLmR0cy5mcmVlZmlyZXRoX2ljb25fMTc2MTcxMjEyMF8wOTk/icon.webp?w=212&fakeurl=1&type=.webp" alt="Free Fire">
-
-    <div class="info">
-
-      <h3>Free Fire</h3>
-
-      <p>Accion, Disparos</p>
-
-    </div>
-
-  </a>
-
-
-  <a href="bloodstrike.html" class="card">
-
-    <img src="https://image.winudf.com/v2/image1/Y29tLm5ldGVhc2UubmV3c3Bpa2VtZV9pY29uXzE3NjEyNzg0NzVfMDEz/icon.webp?w=280&fakeurl=1&type=.webp" alt="Blood Strike">
-
-    <div class="info">
-
-      <h3>Blood Strike</h3>
-
-      <p>Acción, Disparos</p>
-
-    </div>
-
-  </a>
-
-
-  <a href="clashroyale.html" class="card">
-
-    <img src="   https://image.winudf.com/v2/image1/Y29tLnN1cGVyY2VsbC5jbGFzaHJveWFsZV9pY29uXzE3Mjg2MTI1MzlfMDI3/icon.webp?w=280&fakeurl=1&type=.webp" alt="Clash Royale">
-
-    <div class="info">
-
-      <h3>Clash Royale</h3>
-
-      <p>Estrategia, Cartas</p>
-
-    </div>
-
-  </a>
-
-  <a href="tiktok.html" class="card">
-
-    <img src="   https://image.winudf.com/v2/image1/Y29tLnpoaWxpYW9hcHAubXVzaWNhbGx5X2ljb25fMTczOTE2NTM2MF8wMTI/icon.webp?w=212&fakeurl=1&type=.webp" alt="TikTok">
-
-    <div class="info">
-
-      <h3>TikTok</h3>
-
-      <p>Entretenimiento, Videos</p>
-
-    </div>
-
-  </a>
-
-  <a href="trucksim.html" class="card">
-
-    <img src="   https://image.winudf.com/v2/image1/Y29tLm92aWxleC50cnVja3NpbXVsYXRvcnVzYWV2b19pY29uXzE3NjE1MzY1OTVfMDcy/icon.webp?w=280&fakeurl=1&type=.webp" alt="Truck Simulator Drive USA: EVO">
-
-    <div class="info">
-
-      <h3>Truck Simulator Drive USA: EVO</h3>
-
-      <p>Conducción, Camión</p>
-
-    </div>
-
-  </a>
-
-
-</section>
-
-  
-
-  <!-- FOOTER -->
-
-  <footer class="site-footer container">
-
-    <p class="muted">
-
-      Todas las aplicaciones son escaneadas con antivirus, garantizamos el 100% de seguridad de nuestros archivos. <br> 
-
-      APKZone no aloja archivos con derechos de autor. Todos los enlaces dirigen a fuentes públicas o libres de malware.
-
-    </p>
-
-    <p>© 2025 Apkzone</p>
-
-  </footer>
-
-
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Tienda APK — Juegos</h1>
+          <small>Made by Eliasdev</small>
+        </div>
+      </div>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Buscar por título, género o desarrollador" aria-label="Buscar juegos">
+      </div>
+    </div>
+  </header>
+
+  <!-- CATÁLOGO -->
+  <section id="catalog" aria-live="polite">
+    <article class="card">
+      <a href="spotify.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZpMnbuWBgwOenNOrddKMY04bXIEcXllZYjgwPSLA_RQ&s=10" alt="Spotify">
+        <div class="info">
+          <h3>Spotify</h3>
+          <p>Música, Podcast</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="card">
+      <a href="freefire.html">
+        <img src="https://image.winudf.com/v2/image1/Y29tLmR0cy5mcmVlZmlyZXRoX2ljb25fMTc2MTcxMjEyMF8wOTk/icon.webp?w=212&fakeurl=1&type=.webp" alt="Free Fire">
+        <div class="info">
+          <h3>Free Fire</h3>
+          <p>Acción, Disparos</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="card">
+      <a href="bloodstrike.html">
+        <img src="https://image.winudf.com/v2/image1/Y29tLm5ldGVhc2UubmV3c3Bpa2VtZV9pY29uXzE3NjEyNzg0NzVfMDEz/icon.webp?w=280&fakeurl=1&type=.webp" alt="Blood Strike">
+        <div class="info">
+          <h3>Blood Strike</h3>
+          <p>Acción, Disparos</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="card">
+      <a href="clashroyale.html">
+        <img src="https://image.winudf.com/v2/image1/Y29tLnN1cGVyY2VsbC5jbGFzaHJveWFsZV9pY29uXzE3Mjg2MTI1MzlfMDI3/icon.webp?w=280&fakeurl=1&type=.webp" alt="Clash Royale">
+        <div class="info">
+          <h3>Clash Royale</h3>
+          <p>Estrategia, Cartas</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="card">
+      <a href="tiktok.html">
+        <img src="https://image.winudf.com/v2/image1/Y29tLnpoaWxpYW9hcHAubXVzaWNhbGx5X2ljb25fMTczOTE2NTM2MF8wMTI/icon.webp?w=212&fakeurl=1&type=.webp" alt="TikTok">
+        <div class="info">
+          <h3>TikTok</h3>
+          <p>Entretenimiento, Videos</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="card">
+      <a href="trucksim.html">
+        <img src="https://image.winudf.com/v2/image1/Y29tLm92aWxleC50cnVja3NpbXVsYXRvcnVzYWV2b19pY29uXzE3NjE1MzY1OTVfMDcy/icon.webp?w=280&fakeurl=1&type=.webp" alt="Truck Simulator Drive USA: EVO">
+        <div class="info">
+          <h3>Truck Simulator Drive USA: EVO</h3>
+          <p>Conducción, Camión</p>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      Todas las aplicaciones son escaneadas con antivirus, garantizamos el 100% de seguridad de nuestros archivos. <br> 
+      APKZone no aloja archivos con derechos de autor. Todos los enlaces dirigen a fuentes públicas o libres de malware.
+    </p>
+    <p>© 2025 Apkzone</p>
+  </footer>
 </body>
-
 </html>
-
