@@ -1,107 +1,219 @@
 <!doctype html>
 
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-adsense-account" content="ca-pub-8467764962023954">
 
-  <!-- Título que aparecerá en Google -->
-  <title>APKZone - Descarga juegos Android gratis</title>
+  <meta charset="UTF-8" />
 
-  <!-- Descripción corta que saldrá debajo del título -->
-  <meta name="description" content="Descarga juegos APK para Android de forma gratuita y segura. Colección actualizada con enlaces directos a MediaFire.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Palabras clave -->
-  <meta name="keywords" content="apk, juegos android, descargar apk, mediafire, apkzone, juegos gratis">
+  <meta name="google-adsense-account" content="ca-pub-8467764962023954">
 
-  <!-- Autor -->
-  <meta name="author" content="Elías Dev">
+  <!-- Título que aparecerá en Google -->
 
-  <!-- Icono del sitio (favicon) -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>APKZone - Descarga juegos Android gratis</title>
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://apkzone.qzz.io/">
 
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="styles/style.css">
+  <!-- Descripción corta que saldrá debajo del título -->
 
-  <!-- Open Graph para compartir en redes sociales -->
-  <meta property="og:title" content="APKZone - Descarga juegos Android gratis">
-  <meta property="og:description" content="Explora y descarga juegos APK actualizados desde MediaFire. 100% gratis y seguro.">
-  <meta property="og:url" content="https://apkzone.qzz.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://apkzone.qzz.io/images/banner.jpg">
+  <meta name="description" content="Descarga juegos APK para Android de forma gratuita y segura. Colección actualizada con enlaces directos a MediaFire.">
 
-  <!-- Robots -->
-  <meta name="robots" content="index, follow">
 
-  <!-- JavaScript -->
-  <script src="script/script.js" defer></script>
+  <!-- Palabras clave -->
+
+  <meta name="keywords" content="apk, juegos android, descargar apk, mediafire, apkzone, juegos gratis">
+
+
+  <!-- Autor -->
+
+  <meta name="author" content="Elías Dev">
+
+
+  <!-- Icono del sitio (favicon) -->
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <!-- Canonical URL -->
+
+  <link rel="canonical" href="https://apkzone.qzz.io/">
+
+
+  <!-- CSS principal -->
+
+  <link rel="stylesheet" href="styles/style.css">
+
+
+  <!-- Open Graph para compartir en redes sociales -->
+
+  <meta property="og:title" content="APKZone - Descarga juegos Android gratis">
+
+  <meta property="og:description" content="Explora y descarga juegos APK actualizados desde MediaFire. 100% gratis y seguro.">
+
+  <meta property="og:url" content="https://apkzone.qzz.io/">
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:image" content="https://apkzone.qzz.io/images/banner.jpg">
+
+
+  <!-- Robots -->
+
+  <meta name="robots" content="index, follow">
+
+
+
 </head>
-          <body>
-            <!-- HEADER -->
-              <header class="site-header">
-                  <div class="container">
-                        <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-                                        <div>
-                                                  <h1>Tienda APK — Juegos</h1>
-                                                            <small class="muted">Catálogo simple de APKs — proyecto educativo</small>
-                                                                    </div>
-                                                                          </div><div class="search">
-                                                                              <input id="searchInput" type="search" placeholder="Buscar por título, género o desarrollador" aria-label="Buscar juegos">
-                                                                                </div>
-                                                                                </div>
 
-                                                                                  </header>  <!-- CONTROLES FILTROS -->  <section class="controls container">
-                                                                                      <label>
-                                                                                            Género:
-                                                                                                  <select id="genreFilter">
-                                                                                                          <option value="">Todos</option>
-                                                                                                                </select>
-                                                                                                                    </label><label>
-                                                                                                                      Orden:
-                                                                                                                        <select id="orderSelect">
-                                                                                                                            <option value="relevance">Más relevantes</option>
-                                                                                                                                <option value="new">Más nuevos</option>
-                                                                                                                                    <option value="old">Más antiguos</option>
-                                                                                                                                      </select>
-                                                                                                                                      </label>
 
-                                                                                                                                      <div class="uploader-note">
-                                                                                                                                        <small>¿Tienes una APK? Usa el panel de administración (no incluido) para subir archivos de forma segura.</small>
-                                                                                                                                        </div>
+<body>
 
-                                                                                                                                          </section>  <!-- CATÁLOGO -->  <main class="container">
-                                                                                                                                              <div id="resultsInfo" class="results-info">Mostrando <span id="count">0</span> resultados</div>
-                                                                                                                                                  <section id="catalog" class="catalog" aria-live="polite">
-                                                                                                                                                        <!-- Las tarjetas se inyectarán desde script.js -->
-                                                                                                                                                            </section>
-                                                                                                                                                              </main>  <!-- MODAL DE DETALLE / DESCARGA -->  <div id="modal" class="modal" aria-hidden="true">
-                                                                                                                                                                  <div class="modal-inner">
-                                                                                                                                                                        <button id="modalClose" class="close" type="button" aria-label="Cerrar modal">✕</button>
-                                                                                                                                                                              <div id="modalContent"></div>
-                                                                                                                                                                                  </div>
-                                                                                                                                                                                      </div>  <!-- FOOTER -->  <footer class="site-footer container">
-                                                                                                                                                                                          <p class="muted">⚠️ Atención: instala solo APKs de confianza. Este proyecto es educativo. No publiques contenido con copyright sin permiso.</p>
-                                                                                                                                                                                              <p>© 2025 TuProyecto</p>
-                                                                                                                                                                                                
-<footer style="text-align:center; padding:15px; border-top:1px solid #ccc; margin-top:30px; background:#f5f5f5;">
-  <p style="font-size:16px; margin:0;">
-    <span style="margin-right:8px;">🤖</span>
-    <a href="asistente.html" style="color:#007bff; text-decoration:none; font-weight:bold; transition:0.3s;">
-      Ir al Asistente
-    </a>
-  </p>
-</footer>
 
-<!-- Estilo hover -->
-<style>
-  footer a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-  }
-</style>                                                                                                                                                              </body>
-                                                                                                                                                                                              </html>
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <div class="brand">
+
+        <div class="logo" aria-hidden="true"></div>
+
+        <div>
+
+          <h1>Tienda APK — Juegos</h1>
+
+          <small class="muted">Catálogo simple de APKs — proyecto educativo</small>
+
+        </div>
+
+      </div>
+
+      <div class="search">
+
+        <input id="searchInput" type="search" placeholder="Buscar por título, género o desarrollador" aria-label="Buscar juegos">
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+<section id="catalog" class="catalog" aria-live="polite">
+
+
+  <a href="spotify.html" class="card">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZpMnbuWBgwOenNOrddKMY04bXIEcXllZYjgwPSLA_RQ&s=10" alt="Spotify">
+
+    <div class="info">
+
+      <h3>Spotify</h3>
+
+      <p>Musica, Podcast</p>
+
+    </div>
+
+  </a>
+
+
+  <a href="freefire.html" class="card">
+
+    <img src="https://image.winudf.com/v2/image1/Y29tLmR0cy5mcmVlZmlyZXRoX2ljb25fMTc2MTcxMjEyMF8wOTk/icon.webp?w=212&fakeurl=1&type=.webp" alt="Free Fire">
+
+    <div class="info">
+
+      <h3>Free Fire</h3>
+
+      <p>Accion, Disparos</p>
+
+    </div>
+
+  </a>
+
+
+  <a href="bloodstrike.html" class="card">
+
+    <img src="https://image.winudf.com/v2/image1/Y29tLm5ldGVhc2UubmV3c3Bpa2VtZV9pY29uXzE3NjEyNzg0NzVfMDEz/icon.webp?w=280&fakeurl=1&type=.webp" alt="Blood Strike">
+
+    <div class="info">
+
+      <h3>Blood Strike</h3>
+
+      <p>Acción, Disparos</p>
+
+    </div>
+
+  </a>
+
+
+  <a href="clashroyale.html" class="card">
+
+    <img src="   https://image.winudf.com/v2/image1/Y29tLnN1cGVyY2VsbC5jbGFzaHJveWFsZV9pY29uXzE3Mjg2MTI1MzlfMDI3/icon.webp?w=280&fakeurl=1&type=.webp" alt="Clash Royale">
+
+    <div class="info">
+
+      <h3>Clash Royale</h3>
+
+      <p>Estrategia, Cartas</p>
+
+    </div>
+
+  </a>
+
+  <a href="tiktok.html" class="card">
+
+    <img src="   https://image.winudf.com/v2/image1/Y29tLnpoaWxpYW9hcHAubXVzaWNhbGx5X2ljb25fMTczOTE2NTM2MF8wMTI/icon.webp?w=212&fakeurl=1&type=.webp" alt="TikTok">
+
+    <div class="info">
+
+      <h3>TikTok</h3>
+
+      <p>Entretenimiento, Videos</p>
+
+    </div>
+
+  </a>
+
+  <a href="trucksim.html" class="card">
+
+    <img src="   https://image.winudf.com/v2/image1/Y29tLm92aWxleC50cnVja3NpbXVsYXRvcnVzYWV2b19pY29uXzE3NjE1MzY1OTVfMDcy/icon.webp?w=280&fakeurl=1&type=.webp" alt="Truck Simulator Drive USA: EVO">
+
+    <div class="info">
+
+      <h3>Truck Simulator Drive USA: EVO</h3>
+
+      <p>Conducción, Camión</p>
+
+    </div>
+
+  </a>
+
+
+</section>
+
+  
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer container">
+
+    <p class="muted">
+
+      Todas las aplicaciones son escaneadas con antivirus, garantizamos el 100% de seguridad de nuestros archivos. <br> 
+
+      APKZone no aloja archivos con derechos de autor. Todos los enlaces dirigen a fuentes públicas o libres de malware.
+
+    </p>
+
+    <p>© 2025 Apkzone</p>
+
+  </footer>
+
+
+</body>
+
+</html>
+
